@@ -6,7 +6,11 @@ import Backdrop from './Backdrop'
 
 const CanvasModel = () => {
     return (
-        <Canvas>
+        <Canvas
+            shadows
+            camera={{ position: [0, 0, 0], fov: 25 }} // fov is field of view
+            gl={{ preserveDrawingBuffer: true }}
+        >
             <ambientLight intensity={0.5} />
             <Environment preset="city" />
             <CameraRig>
